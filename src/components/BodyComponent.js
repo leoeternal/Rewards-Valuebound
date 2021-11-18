@@ -33,6 +33,7 @@ function Body(props) {
                     </div>
                 </div>
                 <div className="data-row-container">
+                    <p id="error-message"> {props.errorMessage} </p>
                     {
                         props.data.map((d) => {
                             return (

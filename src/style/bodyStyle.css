@@ -144,6 +144,14 @@
     margin-top: 10px;
 }
 
+.data-row-container #error-message{
+    width: 120px;
+    padding: 10px;
+    margin: auto;
+    color:red;
+    font-weight: 700;
+}
+
 .id{
     width:8%;
     height: auto;

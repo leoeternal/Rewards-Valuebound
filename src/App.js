@@ -51,6 +51,8 @@ function App() {
     },
   ]
 
+  const[errorMessage,updatedErrorMessage]=useState("");
+
   const[data,updateData]=useState(duplicateData);
 
   const getSearchData = (e) => {
@@ -61,6 +63,11 @@ function App() {
       }
       return d;
     })
+    if(updated.length===0){
+      updatedErrorMessage("Nothing Found")
+    }else{
+      updatedErrorMessage("")
+    }
     updateData(updated);
   }
   return (
@@ -72,7 +79,7 @@ function App() {
 
     <div className="wrapper">
       <Header getSearchData={getSearchData} />
-      <Body data={data} />
+      <Body errorMessage={errorMessage} data={data} />
       <Pagination />
     </div>
   );
